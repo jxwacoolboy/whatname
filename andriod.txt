@@ -1,0 +1,47 @@
+manifests: 主要文件
+activity_hello_world.xml文件下的
+android:label="@string/app_name"按住ctrl点击进去可以修改appname
+
+<intent-filter>
+	<action android:name="android.intent.action.MAIN" />
+
+	<category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+配置此段话的activity就是打开APP的第一个activity
+
+一个activity就是一个页面
+
+res下装的是资源文件
+
+-----------------------------------------------------------------
+用户界面概述
+所有UI组件都称为View,一般分为两类:1是用于显示数据的组件,2是用于容纳组件的组件
+
+android 中使用的数据单位
+px:像素
+in:英寸
+mm:毫米
+pt:磅 1/72 英寸
+(以上一般不用,因为是物理长度,因为手机屏幕大小不一)
+**dp:(与密度无关的像素):逻辑长度, 在160dpi的屏幕上,1dp=1/160英寸,随着密度变化,像素数量也变化
+**sp:与密度和字体缩放度无关的像素,与dp类似,但可以根据用户的字体大小首选项进行缩放
+
+-------------------------------------------------------------------
+布局(layout)
+linnerlayout:线性布局,按照水平或垂直方向布局组件
+
+实现方式:1 在运行时创建布局    2 在xml文件中配置布局
+
+android:layout_width="wrap_content" 
+自适应大小，强制性地使视图扩展以便显示其全部内容。
+android:layout_height="match_parent"
+强制性地使视图扩展至父元素大小
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="red"
+        android:layout_weight="1"
+        android:background="#ff0000"/>
+设置一个文本框,宽度是自适应,高度是扩展至父元素大小,文本内容为red,
+android:layout_weight="1"是权值
+
